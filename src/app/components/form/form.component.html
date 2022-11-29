@@ -1,0 +1,55 @@
+<div class="d-flex flex-column align-items-center p-5">
+    <h1>Form Angular</h1>
+
+    <form [formGroup]="mainForm" (ngSubmit)="onSubmit()" class="w-100">
+    <div class="form-group">
+        <label for="displayTitle">Title: </label>
+        <input
+        class="form-control"
+        type="text"
+        id="displayTitle"
+        formControlName="displayTitle"
+        />
+    </div>
+    <div class="form-group">
+        <label for="displaySubtitle">Subtitle: </label>
+        <input
+        class="form-control"
+        type="text"
+        id="displaySubtitle"
+        formControlName="displaySubtitle"
+        />
+    </div>
+    <div class="form-group">
+        <label for="displayText">Text: </label>
+        <input
+        class="form-control"
+        type="text"
+        id="displayText"
+        formControlName="displayText"
+        />
+    </div>
+    <div class="form-group">
+        <label for="displayName">Name: </label>
+        <input
+        class="form-control"
+        type="text"
+        id="displayName"
+        formControlName="displayName"
+        />
+    </div>
+    <div class="form-group">
+        <label for="displayLegal">Legal: </label>
+        <input
+        class="form-control"
+        type="text"
+        id="displayLegal"
+        formControlName="displayLegal"
+        />
+    </div>
+    <p>Complete todos los campos para habilitar el botón</p>
+    <button  [disabled]="!mainForm.valid" class="btn btn-danger w-25" type="submit">Enviar</button>
+    <!-- [disabled]="!mainForm.valid"-->
+    </form>
+
+</div>
